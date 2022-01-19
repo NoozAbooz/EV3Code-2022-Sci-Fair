@@ -6,6 +6,10 @@ MASKS="$1"
 export MC=/sys/class/tacho-motor/motor0
 echo brake > $MC/stop_action
 
+aplay ~/EV3Code/WearMaskGLADOS.wav && exit &
+
+sleep 3
+
 # Dispense code
 dispense_mask () {
 
